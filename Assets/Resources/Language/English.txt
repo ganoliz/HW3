@@ -1,0 +1,8 @@
+Language:English
+name:Bomb Master
+start:Game Start
+option:Option
+quit:Quit
+volume:Volume
+effect:Effect
+language:Language

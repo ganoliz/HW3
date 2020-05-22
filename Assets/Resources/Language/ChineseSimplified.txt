@@ -1,0 +1,8 @@
+Language:简体中文
+name:爆爆硕士
+start:开始游戏
+option:游戏选项
+quit:结束游戏
+volume:背景音
+effect:效果音
+language:语言

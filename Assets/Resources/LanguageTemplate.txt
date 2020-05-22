@@ -1,0 +1,15 @@
+Language:繁體中文
+name:爆爆碩士
+start:開始遊戲
+option:遊戲選項
+quit:結束遊戲
+volume:背景音
+effect:效果音
+language:語言
+
+
+使用方法:
+1.更改此檔案名稱至你想要的
+2.將中文部分改名所需語言
+3.將使用方法全部刪除
+4.將更改好的檔案放至 "Asset/Resources/Languages" 檔案夾下

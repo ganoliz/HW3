@@ -1,0 +1,8 @@
+Language:日本語
+name:爆弾マスター
+start:ゲームスタート
+option:オプション
+quit:終了
+volume:ボリューム
+effect:エフェクト
+language:言語

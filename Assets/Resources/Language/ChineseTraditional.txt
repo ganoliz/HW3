@@ -1,0 +1,8 @@
+Language:繁體中文
+name:爆爆碩士
+start:開始遊戲
+option:遊戲選項
+quit:結束遊戲
+volume:背景音
+effect:效果音
+language:語言
