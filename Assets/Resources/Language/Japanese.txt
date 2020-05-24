@@ -6,3 +6,8 @@ quit:終了
 volume:ボリューム
 effect:エフェクト
 language:言語
+resume:再開する
+restart:リスタート
+backtotitle:タイトルに戻る
+GameOver:ゲームオーバー
+Complete:ゲームクリア

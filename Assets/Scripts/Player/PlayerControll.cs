@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControll : MonoBehaviour
 {
+    public int HP;
+    public Text HPText;
 
     Rigidbody2D rigidbody;
     Animator animator;
@@ -20,6 +23,9 @@ public class PlayerControll : MonoBehaviour
     [SerializeField] Sprite sprite_right;
     [SerializeField] float moveSpeed;
     Sprite sprite;
+    public VariableJoystick vJoystick;
+
+    GameController gameController;
 
     // Start is called before the first frame update
     void Start()
@@ -30,13 +36,19 @@ public class PlayerControll : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         collider2D = GetComponents<BoxCollider2D>();
         iswalk = false;
+
+        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        if(Input.GetKey(KeyCode.W))
+        if(HP == 0)
+        {
+            gameController.GameOver();
+        }
+
+        if(Input.GetKey(KeyCode.W)|| vJoystick.Vertical>=0.7)
         {
 
             transform.Translate(new Vector2(0, 1+moveSpeed)*Time.deltaTime);
@@ -44,7 +56,7 @@ public class PlayerControll : MonoBehaviour
             sprite = sprite_up;
             iswalk = true;
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S)|| vJoystick.Vertical<=-0.7)
         {
 
             transform.Translate(new Vector2(0, -1- moveSpeed) * Time.deltaTime);
@@ -52,7 +64,7 @@ public class PlayerControll : MonoBehaviour
             sprite = sprite_down;
             iswalk = true;
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D)||vJoystick.Horizontal>=0.7)
         {
 
             transform.Translate(new Vector2(1+ moveSpeed, 0) * Time.deltaTime);
@@ -60,7 +72,7 @@ public class PlayerControll : MonoBehaviour
             sprite = sprite_right;
             iswalk = true;
         }
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.A)||vJoystick.Horizontal<=-0.7 )
         {
 
             transform.Translate(new Vector2(-1- moveSpeed, 0) * Time.deltaTime);
@@ -73,7 +85,7 @@ public class PlayerControll : MonoBehaviour
             iswalk = false;
         }
 
-
+        HPText.text = "HP:" + HP.ToString();
 
         animator.SetInteger("face", (int)face);
         animator.SetBool("walk", iswalk);
@@ -84,5 +96,12 @@ public class PlayerControll : MonoBehaviour
     public int GetFaceState()
     {
         return (int)face;
+    }
+
+    public void GetDamage(int damage)
+    {
+        HP -= damage;
+        if (HP < 0)
+            HP = 0;
     }
 }

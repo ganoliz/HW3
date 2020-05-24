@@ -6,3 +6,8 @@ quit:Quit
 volume:Volume
 effect:Effect
 language:Language
+resume:Resume
+restart:Restart
+backtotitle:Back To Title
+GameOver:Game Over
+Complete:Game Complete

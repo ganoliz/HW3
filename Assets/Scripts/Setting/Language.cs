@@ -7,7 +7,7 @@ namespace Setting
     public static class Language {
         public static List<string> LanguageList = new List<string>();
 
-        private static int _langIndex = 1;
+        private static int _langIndex = 3;
 
         public static void nextLang()
         {

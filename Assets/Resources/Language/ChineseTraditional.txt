@@ -6,3 +6,8 @@ quit:結束遊戲
 volume:背景音
 effect:效果音
 language:語言
+resume:回到遊戲
+restart:重新開始
+backtotitle:回到標題
+GameOver:遊戲結束
+Complete:遊戲通關

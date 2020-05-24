@@ -11,6 +11,7 @@ public class Weapon : MonoBehaviour
     public LayerMask Whattohit;
 
     int faceState;
+    int firebutton;
 
     PlayerControll playerControll;
 
@@ -19,21 +20,23 @@ public class Weapon : MonoBehaviour
     {
         playerControll = GetComponentInParent<PlayerControll>();
         strength = 1.0f;
+        firebutton = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.J)|| firebutton==1)
         {
             Toss();
+            firebutton = 0;
         }
 
 
     }
 
 
-    void Toss()
+     void Toss()
     {
         faceState = playerControll.GetFaceState();
         //bullet.transform.position = firepoint.transform.position;
@@ -65,4 +68,10 @@ public class Weapon : MonoBehaviour
 
 
     }
+
+  public void fire_button()
+    {
+        firebutton = 1;
+    }
+
 }
