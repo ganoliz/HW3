@@ -21,6 +21,33 @@ namespace Setting
             set { _effect = value; }
         }
 
+        public static void volume_low() {
+            _bgm -= 5;
+            if (_bgm < 0)
+                _bgm = 0;
+        }
+
+        public static void volume_high()
+        {
+            _bgm += 5;
+            if (_bgm > 100)
+                _bgm = 100;
+        }
+
+        public static void effect_low()
+        {
+            _effect -= 5;
+            if (_effect < 0)
+                _effect = 0;
+        }
+
+        public static void effect_high()
+        {
+            _effect += 5;
+            if (_effect > 100)
+                _effect = 100;
+        }
+
         public static void Default()
         {
             _bgm = 70;

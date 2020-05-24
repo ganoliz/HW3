@@ -22,7 +22,7 @@ public class ButtonClickInMainMenu : MonoBehaviour
     {
         Setting.Language.nextLang();
     }
-    
+
     public void PreLanguage()
     {
         Setting.Language.preLang();
@@ -30,5 +30,23 @@ public class ButtonClickInMainMenu : MonoBehaviour
 
     public void BackToMenu() {
         this.gameObject.GetComponent<MenuController>().SetMenuActive("MainMenu");
+    }
+
+    public void LowerVolume()
+    {
+        Setting.Volume.volume_low();
+    }
+
+    public void HigherVolume() {
+        Setting.Volume.volume_high();
+    }
+
+    public void LowerEffect()
+    {
+        Setting.Volume.effect_low();
+    }
+
+    public void HigherEffect() {
+        Setting.Volume.effect_high();
     }
 }
