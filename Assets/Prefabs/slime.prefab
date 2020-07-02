@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2008468515666517852}
   - component: {fileID: 114988657697579438}
   - component: {fileID: 2008468515666517795}
+  - component: {fileID: 3901847253771688763}
   - component: {fileID: 1473424477}
   - component: {fileID: 50548018439561908}
   m_Layer: 9
@@ -95,9 +96,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f7db1d5a10af8042bd4307c7b0a2ece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 0}
-  moveSpeed: 0.5
-  HP: 100
 --- !u!95 &2008468515666517795
 Animator:
   serializedVersion: 3
@@ -108,7 +106,7 @@ Animator:
   m_GameObject: {fileID: 2008468515666517794}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38256b5d03061ac45b0e1facd48c19aa, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0839d7c2a27f1934eb1ac498bafaf0e4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -117,6 +115,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3901847253771688763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008468515666517794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9257bc081b41dbb498e2b9d64898910b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 0}
+  moveSpeed: 0.5
+  HP: 100
 --- !u!61 &1473424477
 BoxCollider2D:
   m_ObjectHideFlags: 0

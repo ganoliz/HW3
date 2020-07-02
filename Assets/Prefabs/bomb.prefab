@@ -95,7 +95,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sec: 2
-  Ready: 0
   explosion: {fileID: 1686799429178661518, guid: 454b377229e080b4aa7823a2ad344c93,
     type: 3}
 --- !u!61 &61634558666625866
@@ -132,7 +131,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7475785096939466225}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
